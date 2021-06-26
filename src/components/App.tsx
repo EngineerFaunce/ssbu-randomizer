@@ -1,30 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
     Box,
     Button,
     Container,
     CssBaseline,
-    IconButton,
+    Grid,
     List,
     ListItem,
     Paper,
     ThemeProvider,
-    Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Brightness7Icon from "@material-ui/icons/Brightness7";
-import Brightness3Icon from "@material-ui/icons/Brightness3";
+
 import { lightTheme, darkTheme } from "../theme";
 import { fighters } from "../data/fighters";
 import Fighter from "./Fighter";
+import NavMenu from "./NavMenu";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        alignContent: "center",
         justifyContent: "center",
     },
     list: {
-        alignContent: "center",
         borderRadius: "0.25rem",
         maxWidth: "400px",
         maxHeight: "600px",
@@ -60,7 +57,6 @@ function App() {
     const [darkMode, setDarkMode] = useState(
         window?.localStorage.getItem("darkTheme") === "true" ? true : false
     );
-    const [icon, setIcon] = useState(<Brightness7Icon htmlColor="#ffec99" />);
 
     const themeConfig = darkMode ? darkTheme : lightTheme;
 
@@ -69,61 +65,59 @@ function App() {
         setFighterList(shuffle([...fighters]));
     };
 
-    useEffect(() => {
-        window?.localStorage.setItem("darkTheme", darkMode.toString());
-
-        setIcon(
-            darkMode ? (
-                <Brightness3Icon htmlColor="#bac8ff" />
-            ) : (
-                <Brightness7Icon htmlColor="#ffec99" />
-            )
-        );
-    }, [darkMode]);
-
     return (
         <ThemeProvider theme={themeConfig}>
             <CssBaseline />
-            <Container maxWidth="md" className={classes.root}>
-                <Box textAlign="center">
-                    <Typography variant="h2">SSBU Randomizer</Typography>
-                    <IconButton
-                        aria-label="toggle dark mode"
-                        onClick={() => {
-                            setDarkMode(!darkMode);
-                        }}
-                    >
-                        {icon}
-                    </IconButton>
-
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        onClick={handleGenerate}
-                    >
-                        Generate
-                    </Button>
-
-                    {fighterList.length !== 0 && (
-                        <List className={classes.list}>
-                            <Paper>
-                                {fighterList.map((fighter: any) => {
-                                    return (
-                                        <ListItem key={fighter.name}>
-                                            <Fighter
-                                                name={fighter.name}
-                                                series={fighter.series}
-                                                isEcho={fighter.isEcho}
-                                                iconURL={fighter.iconURL}
-                                            />
-                                        </ListItem>
-                                    );
-                                })}
-                            </Paper>
-                        </List>
-                    )}
-                </Box>
-            </Container>
+            <Box mt={12}>
+                <Container maxWidth="xl">
+                    <Grid container alignItems="center" spacing={2}>
+                        <Grid item xs={12}>
+                            <NavMenu
+                                controller={{
+                                    state: darkMode,
+                                    setState: setDarkMode,
+                                }}
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Box textAlign="center">
+                                <Button
+                                    variant="contained"
+                                    color="secondary"
+                                    onClick={handleGenerate}
+                                >
+                                    Generate
+                                </Button>
+                            </Box>
+                        </Grid>
+                        {fighterList.length !== 0 && (
+                            <Grid item xs={12}>
+                                <Paper elevation={4} className={classes.list}>
+                                    <List>
+                                        {fighterList.map((fighter: any) => {
+                                            return (
+                                                <ListItem key={fighter.name}>
+                                                    <Fighter
+                                                        name={fighter.name}
+                                                        series={fighter.series}
+                                                        isEcho={fighter.isEcho}
+                                                        iconURL={
+                                                            fighter.iconURL
+                                                        }
+                                                    />
+                                                </ListItem>
+                                            );
+                                        })}
+                                    </List>
+                                </Paper>
+                            </Grid>
+                        )}
+                    </Grid>
+                    <Box textAlign="center" justifyContent="center">
+                        <Box mb={2} />
+                    </Box>
+                </Container>
+            </Box>
         </ThemeProvider>
     );
 }
