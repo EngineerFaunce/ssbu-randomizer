@@ -53,7 +53,7 @@ function NavMenu({ controller }: any) {
                     alignItems="center"
                     className={classes.container}
                 >
-                    <Typography variant="h5" align="center">
+                    <Typography variant="h6" align="center" color="textPrimary">
                         SSBU Randomizer
                     </Typography>
 
