@@ -53,11 +53,11 @@ function NavMenu({ controller }: any) {
                     alignItems="center"
                     className={classes.container}
                 >
-                    <Typography variant="h6" align="center" color="textPrimary">
+                    <Typography variant="h5" align="center" color="textPrimary">
                         SSBU Randomizer
                     </Typography>
 
-                    <Tooltip title="Toggel dark mode">
+                    <Tooltip title="Toggle dark mode">
                         <IconButton
                             aria-label="toggle dark mode"
                             onClick={() => {
