@@ -1,8 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
     Box,
     Button,
-    Container,
+    Checkbox,
     CssBaseline,
     Grid,
     List,
@@ -11,15 +11,26 @@ import {
     ThemeProvider,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
 import { lightTheme, darkTheme } from "../theme";
 import { fighters } from "../data/fighters";
 import Fighter from "./Fighter";
 import NavMenu from "./NavMenu";
 
+interface FighterData {
+    id: number;
+    name: string;
+    series: string;
+    isEcho: boolean;
+    iconURL: string;
+}
+
 const useStyles = makeStyles((theme) => ({
     root: {
-        justifyContent: "center",
+        padding: "2rem 0.5rem",
+        [theme.breakpoints.up("sm")]: {
+            position: "absolute",
+            top: "5%",
+        },
     },
     list: {
         borderRadius: "0.25rem",
@@ -32,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 
 // https://stackoverflow.com/a/2450976
 const shuffle = (array: any) => {
-    var currentIndex = array.length,
+    let currentIndex = array.length,
         randomIndex;
 
     // While there remain elements to shuffle...
@@ -54,70 +65,87 @@ const shuffle = (array: any) => {
 function App() {
     const classes = useStyles();
     const [fighterList, setFighterList] = useState([]);
+    const [isCheck, setIsCheck] = useState<string[]>([]);
     const [darkMode, setDarkMode] = useState(
         window?.localStorage.getItem("darkTheme") === "true" ? true : false
     );
 
     const themeConfig = darkMode ? darkTheme : lightTheme;
 
-    const handleGenerate = (e: any) => {
-        e.preventDefault();
+    // Handle button click for generating randomized list
+    const handleGenerate = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+        setIsCheck([]);
         setFighterList(shuffle([...fighters]));
+    };
+
+    // Handle toggling of checkbox
+    const handleToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { id, checked } = event.target;
+
+        setIsCheck([...isCheck, id]);
+        if (!checked) {
+            setIsCheck(isCheck.filter((item) => item !== id));
+        }
     };
 
     return (
         <ThemeProvider theme={themeConfig}>
             <CssBaseline />
-            <Box mt={12}>
-                <Container maxWidth="xl">
-                    <Grid container alignItems="center" spacing={2}>
-                        <Grid item xs={12}>
-                            <NavMenu
-                                controller={{
-                                    state: darkMode,
-                                    setState: setDarkMode,
-                                }}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <Box textAlign="center">
-                                <Button
-                                    variant="contained"
-                                    color="secondary"
-                                    onClick={handleGenerate}
-                                >
-                                    Generate
-                                </Button>
-                            </Box>
-                        </Grid>
-                        {fighterList.length !== 0 && (
-                            <Grid item xs={12}>
-                                <Paper elevation={4} className={classes.list}>
-                                    <List>
-                                        {fighterList.map((fighter: any) => {
-                                            return (
-                                                <ListItem key={fighter.name}>
-                                                    <Fighter
-                                                        name={fighter.name}
-                                                        series={fighter.series}
-                                                        isEcho={fighter.isEcho}
-                                                        iconURL={
-                                                            fighter.iconURL
-                                                        }
-                                                    />
-                                                </ListItem>
-                                            );
-                                        })}
-                                    </List>
-                                </Paper>
-                            </Grid>
-                        )}
-                    </Grid>
-                    <Box textAlign="center" justifyContent="center">
-                        <Box mb={2} />
+            <Grid container alignItems="center" className={classes.root}>
+                <Grid item xs={12}>
+                    <NavMenu
+                        controller={{
+                            state: darkMode,
+                            setState: setDarkMode,
+                        }}
+                    />
+                </Grid>
+                <Grid item xs={12}>
+                    <Box textAlign="center" mb={2}>
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            onClick={handleGenerate}
+                        >
+                            Generate
+                        </Button>
                     </Box>
-                </Container>
-            </Box>
+                </Grid>
+                {fighterList.length !== 0 && (
+                    <Grid item xs={12}>
+                        <Paper elevation={4} className={classes.list}>
+                            <List>
+                                {fighterList.map((fighter: FighterData) => {
+                                    return (
+                                        <ListItem
+                                            key={fighter.id}
+                                            disabled={isCheck.includes(
+                                                fighter.id + ""
+                                            )}
+                                        >
+                                            <Checkbox
+                                                color="primary"
+                                                id={fighter.id + ""}
+                                                onChange={handleToggle}
+                                                checked={isCheck.includes(
+                                                    fighter.id + ""
+                                                )}
+                                            />
+                                            <Fighter
+                                                name={fighter.name}
+                                                series={fighter.series}
+                                                isEcho={fighter.isEcho}
+                                                iconURL={fighter.iconURL}
+                                            />
+                                        </ListItem>
+                                    );
+                                })}
+                            </List>
+                        </Paper>
+                    </Grid>
+                )}
+            </Grid>
         </ThemeProvider>
     );
 }
