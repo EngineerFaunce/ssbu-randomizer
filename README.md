@@ -2,7 +2,7 @@
 
 React app for generating a randomized list of fighters in Super Smash Bros Ultimate for the Nintendo Switch.
 
-![image](https://user-images.githubusercontent.com/16312436/124338281-efc0a080-db74-11eb-94fe-59762ba55bd1.png)
+![screenshot](https://user-images.githubusercontent.com/16312436/124338547-8fcaf980-db76-11eb-8cb7-9f205c28c7a7.png)
 
 ## Description
 
