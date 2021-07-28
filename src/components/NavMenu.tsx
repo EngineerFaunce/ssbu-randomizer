@@ -40,7 +40,7 @@ function NavMenu({ controller }: any) {
             darkMode ? (
                 <Brightness3Icon htmlColor="#bac8ff" />
             ) : (
-                <Brightness7Icon htmlColor="#ffec99" />
+                <Brightness7Icon htmlColor="#EDBC60" />
             )
         );
     }, [darkMode]);
