@@ -647,4 +647,12 @@ export const fighters = [
         iconURL:
             "https://ssb.wiki.gallery/images/thumb/7/7c/PyraHeadSSBUWebsite.png/120px-PyraHeadSSBUWebsite.png",
     },
+    {
+        id: 82,
+        name: "Kazuya",
+        series: "Tekken",
+        isEcho: false,
+        iconURL:
+            "https://ssb.wiki.gallery/images/thumb/8/85/KazuyaHeadSSBUWebsite.png/120px-KazuyaHeadSSBUWebsite.png",
+    },
 ];
