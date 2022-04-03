@@ -655,4 +655,12 @@ export const fighters = [
         iconURL:
             "https://ssb.wiki.gallery/images/thumb/8/85/KazuyaHeadSSBUWebsite.png/120px-KazuyaHeadSSBUWebsite.png",
     },
+    {
+        id: 83,
+        name: "Sora",
+        series: "Kingdom Hearts",
+        isEcho: false,
+        iconURL:
+            "https://ssb.wiki.gallery/images/thumb/6/61/SoraHeadSSBUWebsite.png/120px-SoraHeadSSBUWebsite.png",
+    },
 ];
