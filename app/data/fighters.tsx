@@ -1,10 +1,12 @@
-export const fighters = [
+import { FighterData } from "../types/fighter.type";
+
+export const fighters: FighterData[] = [
     {
         id: 1,
         name: "Mario",
         series: "Super Mario",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/9/9e/MarioHeadSSBUWebsite.png/120px-MarioHeadSSBUWebsite.png",
     },
     {
@@ -12,7 +14,7 @@ export const fighters = [
         name: "Donkey Kong",
         series: "Donkey Kong",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/2/21/DonkeyKongHeadSSBUWebsite.png/120px-DonkeyKongHeadSSBUWebsite.png",
     },
     {
@@ -20,7 +22,7 @@ export const fighters = [
         name: "Link",
         series: "The Legend of Zelda",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/2/2b/LinkHeadSSBUWebsite.png/120px-LinkHeadSSBUWebsite.png",
     },
     {
@@ -28,7 +30,7 @@ export const fighters = [
         name: "Samus",
         series: "Metroid",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/d/d0/SamusHeadSSBUWebsite.png/120px-SamusHeadSSBUWebsite.png",
     },
     {
@@ -36,7 +38,7 @@ export const fighters = [
         name: "Dark Samus",
         series: "Metroid",
         isEcho: true,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/2/24/DarkSamusHeadSSBUWebsite.png/120px-DarkSamusHeadSSBUWebsite.png",
     },
     {
@@ -44,7 +46,7 @@ export const fighters = [
         name: "Yoshi",
         series: "Yoshi",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/9/93/YoshiHeadSSBUWebsite.png/120px-YoshiHeadSSBUWebsite.png",
     },
     {
@@ -52,7 +54,7 @@ export const fighters = [
         name: "Kirby",
         series: "Kirby",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/1/15/KirbyHeadSSBUWebsite.png/120px-KirbyHeadSSBUWebsite.png",
     },
     {
@@ -60,7 +62,7 @@ export const fighters = [
         name: "Fox",
         series: "Star Fox",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/c/c9/FoxHeadSSBUWebsite.png/120px-FoxHeadSSBUWebsite.png",
     },
     {
@@ -68,7 +70,7 @@ export const fighters = [
         name: "Pikachu",
         series: "Pokemon",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/5/52/PikachuHeadSSBUWebsite.png/120px-PikachuHeadSSBUWebsite.png",
     },
     {
@@ -76,7 +78,7 @@ export const fighters = [
         name: "Luigi",
         series: "Super Mario",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/9/9d/LuigiHeadSSBUWebsite.png/120px-LuigiHeadSSBUWebsite.png",
     },
     {
@@ -84,7 +86,7 @@ export const fighters = [
         name: "Ness",
         series: "Earth Bound",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/d/d5/NessHeadSSBUWebsite.png/120px-NessHeadSSBUWebsite.png",
     },
     {
@@ -92,7 +94,7 @@ export const fighters = [
         name: "Captain Falcon",
         series: "F-Zero",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/6/6b/CaptainFalconHeadSSBUWebsite.png/120px-CaptainFalconHeadSSBUWebsite.png",
     },
     {
@@ -100,7 +102,7 @@ export const fighters = [
         name: "Jigglypuff",
         series: "Pokemon",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/9/90/JigglypuffHeadSSBUWebsite.png/120px-JigglypuffHeadSSBUWebsite.png",
     },
     {
@@ -108,7 +110,7 @@ export const fighters = [
         name: "Peach",
         series: "Super Mario",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/1/14/PeachHeadSSBUWebsite.png/120px-PeachHeadSSBUWebsite.png",
     },
     {
@@ -116,7 +118,7 @@ export const fighters = [
         name: "Daisy",
         series: "Super Mario",
         isEcho: true,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/2/2d/DaisyHeadSSBUWebsite.png/120px-DaisyHeadSSBUWebsite.png",
     },
     {
@@ -124,7 +126,7 @@ export const fighters = [
         name: "Bowser",
         series: "Super Mario",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/0/0b/BowserHeadSSBUWebsite.png/120px-BowserHeadSSBUWebsite.png",
     },
     {
@@ -132,7 +134,7 @@ export const fighters = [
         name: "Ice Climbers",
         series: "Ice Climber",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/0/0c/IceClimbersHeadSSBUWebsite.png/120px-IceClimbersHeadSSBUWebsite.png",
     },
     {
@@ -140,7 +142,7 @@ export const fighters = [
         name: "Sheik",
         series: "The Legend of Zelda",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/1/1e/SheikHeadSSBUWebsite.png/120px-SheikHeadSSBUWebsite.png",
     },
     {
@@ -148,7 +150,7 @@ export const fighters = [
         name: "Zelda",
         series: "The Legend of Zelda",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/c/c8/ZeldaHeadSSBUWebsite.png/120px-ZeldaHeadSSBUWebsite.png",
     },
     {
@@ -156,7 +158,7 @@ export const fighters = [
         name: "Dr. Mario",
         series: "Super Mario",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/c/c8/DrMarioHeadSSBUWebsite.png/120px-DrMarioHeadSSBUWebsite.png",
     },
     {
@@ -164,7 +166,7 @@ export const fighters = [
         name: "Pichu",
         series: "Pokemon",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/5/50/PichuHeadSSBUWebsite.png/120px-PichuHeadSSBUWebsite.png",
     },
     {
@@ -172,7 +174,7 @@ export const fighters = [
         name: "Falco",
         series: "Star Fox",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/6/6e/FalcoHeadSSBUWebsite.png/120px-FalcoHeadSSBUWebsite.png",
     },
     {
@@ -180,7 +182,7 @@ export const fighters = [
         name: "Marth",
         series: "Fire Emblem",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/a/ae/MarthHeadSSBUWebsite.png/120px-MarthHeadSSBUWebsite.png",
     },
     {
@@ -188,7 +190,7 @@ export const fighters = [
         name: "Lucina",
         series: "Fire Emblem",
         isEcho: true,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/d/d8/LucinaHeadSSBUWebsite.png/120px-LucinaHeadSSBUWebsite.png",
     },
     {
@@ -196,7 +198,7 @@ export const fighters = [
         name: "Young Link",
         series: "The Legend of Zelda",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/c/c0/YoungLinkHeadSSBUWebsite.png/120px-YoungLinkHeadSSBUWebsite.png",
     },
     {
@@ -204,7 +206,7 @@ export const fighters = [
         name: "Ganondorf",
         series: "The Legend of Zelda",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/b/b6/GanondorfHeadSSBUWebsite.png/120px-GanondorfHeadSSBUWebsite.png",
     },
     {
@@ -212,7 +214,7 @@ export const fighters = [
         name: "Mewtwo",
         series: "Pokemon",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/7/7e/MewtwoHeadSSBUWebsite.png/120px-MewtwoHeadSSBUWebsite.png",
     },
     {
@@ -220,7 +222,7 @@ export const fighters = [
         name: "Roy",
         series: "Fire Emblem",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/2/22/RoyHeadSSBUWebsite.png/120px-RoyHeadSSBUWebsite.png",
     },
     {
@@ -228,7 +230,7 @@ export const fighters = [
         name: "Chrom",
         series: "Fire Emblem",
         isEcho: true,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/7/70/ChromHeadSSBUWebsite.png/120px-ChromHeadSSBUWebsite.png",
     },
     {
@@ -236,7 +238,7 @@ export const fighters = [
         name: "Mr. Game & Watch",
         series: "Game & Watch",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/1/15/MrGame%26WatchHeadSSBUWebsite.png/120px-MrGame%26WatchHeadSSBUWebsite.png",
     },
     {
@@ -244,7 +246,7 @@ export const fighters = [
         name: "Meta Knight",
         series: "Kirby",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/3/3d/MetaKnightHeadSSBUWebsite.png/120px-MetaKnightHeadSSBUWebsite.png",
     },
     {
@@ -252,7 +254,7 @@ export const fighters = [
         name: "Pit",
         series: "Kid Icarus",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/d/d7/PitHeadSSBUWebsite.png/120px-PitHeadSSBUWebsite.png",
     },
     {
@@ -260,7 +262,7 @@ export const fighters = [
         name: "Dark Pit",
         series: "Kid Icarus",
         isEcho: true,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/8/8b/DarkPitHeadSSBUWebsite.png/120px-DarkPitHeadSSBUWebsite.png",
     },
     {
@@ -268,7 +270,7 @@ export const fighters = [
         name: "Zero Suit Samus",
         series: "Metroid",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/5/5a/ZeroSuitSamusHeadSSBUWebsite.png/120px-ZeroSuitSamusHeadSSBUWebsite.png",
     },
     {
@@ -276,7 +278,7 @@ export const fighters = [
         name: "Wario",
         series: "Wario Ware",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/7/7f/WarioHeadSSBUWebsite.png/120px-WarioHeadSSBUWebsite.png",
     },
     {
@@ -284,7 +286,7 @@ export const fighters = [
         name: "Snake",
         series: "Metal Gear Solid",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/9/9f/SnakeHeadSSBUWebsite.png/120px-SnakeHeadSSBUWebsite.png",
     },
     {
@@ -292,7 +294,7 @@ export const fighters = [
         name: "Ike",
         series: "Fire Emblem",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/2/25/IkeHeadSSBUWebsite.png/120px-IkeHeadSSBUWebsite.png",
     },
     {
@@ -300,7 +302,7 @@ export const fighters = [
         name: "Pokemon Trainer",
         series: "Pokemon",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/2/2c/Pok%C3%A9monTrainerHeadSSBUWebsite.png/120px-Pok%C3%A9monTrainerHeadSSBUWebsite.png",
     },
     {
@@ -308,7 +310,7 @@ export const fighters = [
         name: "Diddy Kong",
         series: "Donkey Kong",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/5/5d/DiddyKongHeadSSBUWebsite.png/120px-DiddyKongHeadSSBUWebsite.png",
     },
     {
@@ -316,7 +318,7 @@ export const fighters = [
         name: "Lucas",
         series: "Earth Bound",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/3/31/LucasHeadSSBUWebsite.png/120px-LucasHeadSSBUWebsite.png",
     },
     {
@@ -324,7 +326,7 @@ export const fighters = [
         name: "Sonic",
         series: "Sonic the Hedgehog",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/b/b7/SonicHeadSSBUWebsite.png/120px-SonicHeadSSBUWebsite.png",
     },
     {
@@ -332,7 +334,7 @@ export const fighters = [
         name: "King Dedede",
         series: "Kirby",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/f/fe/KingDededeHeadSSBUWebsite.png/120px-KingDededeHeadSSBUWebsite.png",
     },
     {
@@ -340,7 +342,7 @@ export const fighters = [
         name: "Olimar",
         series: "Pikmin",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/9/97/OlimarHeadSSBUWebsite.png/120px-OlimarHeadSSBUWebsite.png",
     },
     {
@@ -348,7 +350,7 @@ export const fighters = [
         name: "Lucario",
         series: "Pokemon",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/2/20/LucarioHeadSSBUWebsite.png/120px-LucarioHeadSSBUWebsite.png",
     },
     {
@@ -356,7 +358,7 @@ export const fighters = [
         name: "R.O.B.",
         series: "R.O.B.",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/b/be/ROBHeadSSBUWebsite.png/120px-ROBHeadSSBUWebsite.png",
     },
     {
@@ -364,7 +366,7 @@ export const fighters = [
         name: "Toon Link",
         series: "The Legend of Zelda",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/b/bf/ToonLinkHeadSSBUWebsite.png/120px-ToonLinkHeadSSBUWebsite.png",
     },
     {
@@ -372,7 +374,7 @@ export const fighters = [
         name: "Wolf",
         series: "Star Fox",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/0/06/WolfHeadSSBUWebsite.png/120px-WolfHeadSSBUWebsite.png",
     },
     {
@@ -380,7 +382,7 @@ export const fighters = [
         name: "Villager",
         series: "Animal Crossing",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/f/f9/VillagerHeadSSBUWebsite.png/120px-VillagerHeadSSBUWebsite.png",
     },
     {
@@ -388,7 +390,7 @@ export const fighters = [
         name: "Mega Man",
         series: "Mega Man",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/2/26/MegaManHeadSSBUWebsite.png/120px-MegaManHeadSSBUWebsite.png",
     },
     {
@@ -396,7 +398,7 @@ export const fighters = [
         name: "Wii Fit Trainer",
         series: "Wii Fit",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/f/fc/WiiFitTrainerHeadSSBUWebsite.png/120px-WiiFitTrainerHeadSSBUWebsite.png",
     },
     {
@@ -404,7 +406,7 @@ export const fighters = [
         name: "Rosalina & Luma",
         series: "Super Mario",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/6/63/RosalinaHeadSSBUWebsite.png/120px-RosalinaHeadSSBUWebsite.png",
     },
     {
@@ -412,7 +414,7 @@ export const fighters = [
         name: "Little Mac",
         series: "Punch Out",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/8/87/LittleMacHeadSSBUWebsite.png/120px-LittleMacHeadSSBUWebsite.png",
     },
     {
@@ -420,7 +422,7 @@ export const fighters = [
         name: "Greninja",
         series: "Pokemon",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/7/79/GreninjaHeadSSBUWebsite.png/120px-GreninjaHeadSSBUWebsite.png",
     },
     {
@@ -428,7 +430,7 @@ export const fighters = [
         name: "Palutena",
         series: "Kid Icarus",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/d/d7/PalutenaHeadSSBUWebsite.png/120px-PalutenaHeadSSBUWebsite.png",
     },
     {
@@ -436,7 +438,7 @@ export const fighters = [
         name: "Pac-Man",
         series: "Pac-Man",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/3/3d/Pac-ManHeadSSBUWebsite.png/120px-Pac-ManHeadSSBUWebsite.png",
     },
     {
@@ -444,7 +446,7 @@ export const fighters = [
         name: "Robin",
         series: "Fire Emblem",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/4/43/RobinHeadSSBUWebsite.png/120px-RobinHeadSSBUWebsite.png",
     },
     {
@@ -452,7 +454,7 @@ export const fighters = [
         name: "Shulk",
         series: "Xenoblade Chronicles",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/b/bf/ShulkHeadSSBUWebsite.png/120px-ShulkHeadSSBUWebsite.png",
     },
     {
@@ -460,7 +462,7 @@ export const fighters = [
         name: "Bowser Jr.",
         series: "Super Mario",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/3/3e/BowserJrHeadSSBUWebsite.png/120px-BowserJrHeadSSBUWebsite.png",
     },
     {
@@ -468,7 +470,7 @@ export const fighters = [
         name: "Duck Hunt",
         series: "Duck Hunt",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/3/38/DuckHuntHeadSSBUWebsite.png/120px-DuckHuntHeadSSBUWebsite.png",
     },
     {
@@ -476,7 +478,7 @@ export const fighters = [
         name: "Ryu",
         series: "Street Fighter",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/2/20/RyuHeadSSBUWebsite.png/120px-RyuHeadSSBUWebsite.png",
     },
     {
@@ -484,7 +486,7 @@ export const fighters = [
         name: "Ken",
         series: "Street Fighter",
         isEcho: true,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/e/ef/KenHeadSSBUWebsite.png/120px-KenHeadSSBUWebsite.png",
     },
     {
@@ -492,7 +494,7 @@ export const fighters = [
         name: "Cloud",
         series: "Final Fantasy",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/c/cb/CloudHeadSSBUWebsite.png/120px-CloudHeadSSBUWebsite.png",
     },
     {
@@ -500,7 +502,7 @@ export const fighters = [
         name: "Corrin",
         series: "Fire Emblem",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/6/6a/CorrinHeadSSBUWebsite.png/120px-CorrinHeadSSBUWebsite.png",
     },
     {
@@ -508,7 +510,7 @@ export const fighters = [
         name: "Bayonetta",
         series: "Bayonetta",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/2/27/BayonettaHeadSSBUWebsite.png/120px-BayonettaHeadSSBUWebsite.png",
     },
     {
@@ -516,7 +518,7 @@ export const fighters = [
         name: "Inkling",
         series: "Splatoon",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/0/04/InklingHeadSSBUWebsite.png/120px-InklingHeadSSBUWebsite.png",
     },
     {
@@ -524,7 +526,7 @@ export const fighters = [
         name: "Ridley",
         series: "Metroid",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/7/7c/RidleyHeadSSBUWebsite.png/120px-RidleyHeadSSBUWebsite.png",
     },
     {
@@ -532,7 +534,7 @@ export const fighters = [
         name: "Simon",
         series: "Castlevania",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/5/52/SimonHeadSSBUWebsite.png/120px-SimonHeadSSBUWebsite.png",
     },
     {
@@ -540,7 +542,7 @@ export const fighters = [
         name: "Richter",
         series: "Castlevania",
         isEcho: true,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/a/ab/RichterHeadSSBUWebsite.png/120px-RichterHeadSSBUWebsite.png",
     },
     {
@@ -548,7 +550,7 @@ export const fighters = [
         name: "King K. Rool",
         series: "Donkey Kong",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/3/35/KingKRoolHeadSSBUWebsite.png/120px-KingKRoolHeadSSBUWebsite.png",
     },
     {
@@ -556,7 +558,7 @@ export const fighters = [
         name: "Isabelle",
         series: "Animal Crossing",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/2/2e/IsabelleHeadSSBUWebsite.png/120px-IsabelleHeadSSBUWebsite.png",
     },
     {
@@ -564,7 +566,7 @@ export const fighters = [
         name: "Incineroar",
         series: "Pokemon",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/e/e3/IncineroarHeadSSBUWebsite.png/120px-IncineroarHeadSSBUWebsite.png",
     },
     {
@@ -572,7 +574,7 @@ export const fighters = [
         name: "Piranha Plant",
         series: "Super Mario",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/c/cf/PiranhaPlantHeadSSBUWebsite.png/120px-PiranhaPlantHeadSSBUWebsite.png",
     },
     {
@@ -580,7 +582,7 @@ export const fighters = [
         name: "Joker",
         series: "Persona",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/6/63/JokerHeadSSBUWebsite.png/120px-JokerHeadSSBUWebsite.png",
     },
     {
@@ -588,7 +590,7 @@ export const fighters = [
         name: "Hero",
         series: "Dragon Quest",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/1/1e/HeroHeadSSBUWebsite.png/120px-HeroHeadSSBUWebsite.png",
     },
     {
@@ -596,7 +598,7 @@ export const fighters = [
         name: "Banjo & Kazooie",
         series: "Banjo-Kazooie",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/1/12/Banjo%26KazooieHeadSSBUWebsite.png/120px-Banjo%26KazooieHeadSSBUWebsite.png",
     },
     {
@@ -604,7 +606,7 @@ export const fighters = [
         name: "Terry",
         series: "Fatal Fury",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/2/2e/TerryHeadSSBUWebsite.png/120px-TerryHeadSSBUWebsite.png",
     },
     {
@@ -612,7 +614,7 @@ export const fighters = [
         name: "Byleth",
         series: "Fire Emblem",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/8/86/BylethHeadSSBUWebsite.png/120px-BylethHeadSSBUWebsite.png",
     },
     {
@@ -620,7 +622,7 @@ export const fighters = [
         name: "Min Min",
         series: "Arms",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/f/fc/MinMinHeadSSBUWebsite.png/120px-MinMinHeadSSBUWebsite.png",
     },
     {
@@ -628,7 +630,7 @@ export const fighters = [
         name: "Steve",
         series: "Minecraft",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/4/4f/SteveHeadSSBUWebsite.png/120px-SteveHeadSSBUWebsite.png",
     },
     {
@@ -636,7 +638,7 @@ export const fighters = [
         name: "Sephiroth",
         series: "Final Fantasy",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/6/64/SephirothHeadSSBUWebsite.png/120px-SephirothHeadSSBUWebsite.png",
     },
     {
@@ -644,7 +646,7 @@ export const fighters = [
         name: "Pyra/Mythra",
         series: "Xenoblade Chronicles",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/7/7c/PyraHeadSSBUWebsite.png/120px-PyraHeadSSBUWebsite.png",
     },
     {
@@ -652,7 +654,7 @@ export const fighters = [
         name: "Kazuya",
         series: "Tekken",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/8/85/KazuyaHeadSSBUWebsite.png/120px-KazuyaHeadSSBUWebsite.png",
     },
     {
@@ -660,7 +662,7 @@ export const fighters = [
         name: "Sora",
         series: "Kingdom Hearts",
         isEcho: false,
-        iconURL:
+        iconUrl:
             "https://ssb.wiki.gallery/images/thumb/6/61/SoraHeadSSBUWebsite.png/120px-SoraHeadSSBUWebsite.png",
     },
 ];
