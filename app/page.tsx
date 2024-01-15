@@ -29,6 +29,9 @@ const shuffle = (array: any) => {
 export default function Home() {
   const [fighterList, setFighterList] = useState<FighterData[]>([]);
   const [isCheck, setIsCheck] = useState<string[]>([]);
+  const [selectedSeries, setSelectedSeries] = useState<string[]>([]);
+
+  const allSeries = [...new Set(fighters.map((fighter) => fighter.series))];
 
   // Handle toggling of checkbox
   const handleToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,6 +41,16 @@ export default function Home() {
     if (!checked) {
       setIsCheck(isCheck.filter((item) => item !== id));
     }
+  };
+
+  // Series filter
+  const handleSeriesChange = (series: string) => {
+    // clear checkboxes
+    setIsCheck([]);
+
+    setSelectedSeries(prev =>
+      prev.includes(series) ? prev.filter(s => s !== series) : [...prev, series]
+    );
   };
 
   // Handle button click for generating randomized list
@@ -61,31 +74,54 @@ export default function Home() {
           >
             Generate
           </button>
+          <div className="dropdown">
+            <AdjustmentsHorizontalIcon tabIndex={0} role="button" className="w-8 h-8" />
+            <div className="dropdown-content shadow bg-base-300 rounded-box w-80 h-96 p-4">
+              <h2>Game Series</h2>
+              <ul tabIndex={0} className="z-[1] flex-nowrap menu overflow-y-auto h-80">
+                {allSeries.map(series => (
+                  <li key={series}>
+                    <div>
+                      <input
+                        type="checkbox"
+                        className="checkbox"
+                        checked={selectedSeries.includes(series)}
+                        onChange={() => handleSeriesChange(series)}
+                      />
+                      <span className="label-text">{series}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
           <ThemeToggle />
         </div>
         <div className="h-96 mt-4 p-2 overflow-auto bg-base-200 rounded">
           {fighterList.length !== 0 && (
-            fighterList.map((fighter: FighterData) => {
-              return (
-                <label htmlFor={fighter.id + ""} className="flex items-center m-2 px-2 hover:bg-gray-700 rounded gap-y-2 cursor-pointer">
-                  <input
-                    id={fighter.id + ""}
-                    type="checkbox"
-                    onChange={handleToggle}
-                    checked={isCheck.includes(fighter.id + "")}
-                    className="checkbox mr-2"
-                  />
-                  <FighterCard
-                    id={fighter.id}
-                    key={fighter.id}
-                    name={fighter.name}
-                    iconUrl={fighter.iconUrl}
-                    series={fighter.series}
-                    isEcho={fighter.isEcho}
-                  />
-                </label>
-              );
-            })
+            fighterList
+              .filter((fighter: FighterData) => selectedSeries.includes(fighter.series))
+              .map((fighter: FighterData) => {
+                return (
+                  <label htmlFor={fighter.id + ""} className="flex items-center m-2 px-2 hover:bg-gray-700 rounded gap-y-2 cursor-pointer">
+                    <input
+                      id={fighter.id + ""}
+                      type="checkbox"
+                      onChange={handleToggle}
+                      checked={isCheck.includes(fighter.id + "")}
+                      className="checkbox mr-2"
+                    />
+                    <FighterCard
+                      id={fighter.id}
+                      key={fighter.id}
+                      name={fighter.name}
+                      iconUrl={fighter.iconUrl}
+                      series={fighter.series}
+                      isEcho={fighter.isEcho}
+                    />
+                  </label>
+                );
+              })
           )}
         </div>
       </div>
