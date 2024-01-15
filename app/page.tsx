@@ -100,10 +100,10 @@ export default function Home() {
         <div className="h-96 mt-4 p-2 overflow-auto bg-base-200 rounded">
           {fighterList.length !== 0 && (
             fighterList
-              .filter((fighter: FighterData) => selectedSeries.includes(fighter.series))
+              .filter((fighter: FighterData) => selectedSeries.includes(fighter.series) || selectedSeries.length === 0)
               .map((fighter: FighterData) => {
                 return (
-                  <label htmlFor={fighter.id + ""} className="flex items-center m-2 px-2 hover:bg-gray-700 rounded gap-y-2 cursor-pointer">
+                  <label key={fighter.id + ""} htmlFor={fighter.id + ""} className="flex items-center m-2 px-2 hover:bg-gray-700 rounded gap-y-2 cursor-pointer">
                     <input
                       id={fighter.id + ""}
                       type="checkbox"
