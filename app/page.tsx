@@ -77,19 +77,26 @@ export default function Home() {
           <div className="dropdown">
             <AdjustmentsHorizontalIcon tabIndex={0} role="button" className="w-8 h-8" />
             <div className="dropdown-content shadow bg-base-300 rounded-box w-80 h-96 p-4">
-              <h2>Game Series</h2>
+              <div className="flex flex-row justify-between items-start">
+                <h2 className="font-semibold">Game Series</h2>
+                <button className="btn btn-outline btn-sm"
+                  onClick={() => setSelectedSeries([])}>
+                  Clear
+                </button>
+              </div>
               <ul tabIndex={0} className="z-[1] flex-nowrap menu overflow-y-auto h-80">
                 {allSeries.map(series => (
                   <li key={series}>
-                    <div>
+                    <label htmlFor={`checkbox-${series}`}>
                       <input
+                        id={`checkbox-${series}`}
                         type="checkbox"
                         className="checkbox"
                         checked={selectedSeries.includes(series)}
                         onChange={() => handleSeriesChange(series)}
                       />
                       <span className="label-text">{series}</span>
-                    </div>
+                    </label>
                   </li>
                 ))}
               </ul>
